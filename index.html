@@ -35,7 +35,7 @@
 
 <body ng-controller="AppCtrl" layout ng-class="{'evilMode': evilMode}">
     <div layout-fill layout="column">
-        <md-toolbar class="md-primary md-whiteframe-1dp">
+        <md-toolbar class="md-whiteframe-1dp" ng-class="{'md-warn': evilMode, 'md-primary': !evilMode}">
             <div class="md-toolbar-tools">
                 <h2>El "COSITO"</h2>
                 <span flex></span>
