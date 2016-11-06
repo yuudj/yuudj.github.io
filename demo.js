@@ -1,8 +1,8 @@
 angular.module('BlankApp', ['ngMaterial', 'ui.knob']).controller('AppCtrl', function ($scope) {
     var client;
     var topicBase = 'rb/ali/';
-    $scope.evilMode= false;
-    
+    $scope.evilMode = false;
+
     var temp = {
         topic: topicBase + 'sens/tem',
         value: 10,
@@ -75,18 +75,24 @@ angular.module('BlankApp', ['ngMaterial', 'ui.knob']).controller('AppCtrl', func
 
     function connect(hostname, port, clientId) {
         console.info('Connecting to Server: Hostname: ', hostname, '. Port: ', port, '. Client ID: ', clientId);
+        try {
 
-        client = new Paho.MQTT.Client(hostname, Number(port), clientId);
-        // set callback handlers
-        client.onConnectionLost = onConnectionLost;
-        client.onMessageArrived = onMessageArrived;
 
-        // connect the client
-        client.connect({
-            onSuccess: onConnect,
-            onFailure: onConnectFail,
-            invocationContext: { host: hostname, port: port, clientId: clientId }
-        });
+            client = new Paho.MQTT.Client(hostname, Number(port), clientId);
+            // set callback handlers
+            client.onConnectionLost = onConnectionLost;
+            client.onMessageArrived = onMessageArrived;
+
+            // connect the client
+            client.connect({
+                onSuccess: onConnect,
+                onFailure: onConnectFail,
+                invocationContext: { host: hostname, port: port, clientId: clientId }
+            });
+        }
+        catch (error) {
+            console.log(error);
+        }
 
 
     }
