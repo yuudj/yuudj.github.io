@@ -64,8 +64,10 @@ angular.module('BlankApp', ['ngMaterial', 'ui.knob']).controller('AppCtrl', func
         value: 10
     }
 
+
     $scope.hum = hum;
     $scope.temp = temp;
+    $scope.pir = pir;
 
     connect('broker.hivemq.com', 8000, 'elcosito-client');
 
@@ -167,7 +169,15 @@ angular.module('BlankApp', ['ngMaterial', 'ui.knob']).controller('AppCtrl', func
         var destinationName = new String(message.destinationName);
         var numericPayload = new Number(message.payloadString);
 
-        //console.log("mensaje : " + message.destinationName)
+        console.log("mensaje : " + destinationName + "|" + numericPayload)
+        if (destinationName.startsWith(topicBase + 'evil')) {
+              $scope.$apply(function () {
+                    $scope.evilMode=!$scope.evilMode ;
+                });
+             
+            return;
+        }
+
 
         var dev = [hum, temp, pir];
         dev.forEach(function (element) {
@@ -178,6 +188,8 @@ angular.module('BlankApp', ['ngMaterial', 'ui.knob']).controller('AppCtrl', func
 
             }
         }, this);
+
+
     }
 
     function onConnectFail(invocationContext, errorCode, errorMessage) {

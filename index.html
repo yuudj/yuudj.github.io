@@ -1,6 +1,7 @@
 <html lang="en" ng-app="BlankApp" ng-cloak>
 
-<head >
+<head>
+    <title>The Thing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -30,6 +31,57 @@
         md-content {
             background-color: transparent;
         }
+        /*
+Icon: Daniel Bruce, danielbruce.se, flaticon.com
+Animation: Federico Brigante, bfred.it
+for Wildlife.la and Kia
+*/
+        
+        html,
+        body {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            background: #408000;
+        }
+        
+        svg {
+            margin: auto;
+        }
+        
+        .watch.on #lid {
+            animation: blink 1s infinite;
+        }
+        
+        .watch.on #eye {
+            animation: squeeze 1s infinite;
+        }
+        
+        @keyframes blink {
+            90% {
+                transform: none;
+                animation-timing-function: ease-in;
+            }
+            93% {
+                transform: translateY(15px) scaleY(0)
+            }
+            100% {
+                animation-timing-function: ease-out;
+            }
+        }
+        
+        @keyframes squeeze {
+            90% {
+                transform: none;
+                animation-timing-function: ease-in;
+            }
+            93% {
+                transform: translateY(3px) scaleY(0.8)
+            }
+            100% {
+                animation-timing-function: ease-out;
+            }
+        }
     </style>
 </head>
 
@@ -37,7 +89,7 @@
     <div layout-fill layout="column">
         <md-toolbar class="md-whiteframe-1dp" ng-class="{'md-warn': evilMode, 'md-primary': !evilMode}">
             <div class="md-toolbar-tools">
-                <h2>The "Thing"</h2>
+                <h2>The "Thing" <i ng-show="evilMode">Evil Mode-ON</i> </h2>
                 <span flex></span>
             </div>
         </md-toolbar>
@@ -49,37 +101,55 @@
                 <ui-knob value="hum.value" options="hum.options"></ui-knob>
 
             </div>
-        </md-content>
-         <md-button class="md-fab" ng-disabled="false" aria-label="Evil Mode" style="position:absolute; bottom:10px; left:10px" ng-click="evilMode=!evilMode">
-            <md-icon md-svg-src="img/devil.svg"></md-icon>
-        </md-button>
-    </div>
 
+
+        </md-content>
+
+        <div flex layout layout-align="center center" ng-show="evilMode">
+            <div>
+                <svg width="100" height="100" viewBox="0 0 30 30" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                    class="watch" ng-class="{'on': pir.value==1}">
+                    <defs>
+                        <path d="M0,15.089434 C0,16.3335929 5.13666091,24.1788679 14.9348958,24.1788679 C24.7325019,24.1788679 29.8697917,16.3335929 29.8697917,15.089434 C29.8697917,13.8456167 24.7325019,6 14.9348958,6 C5.13666091,6 0,13.8456167 0,15.089434 Z"
+                            id="outline"></path>
+                        <mask id="mask">
+                            <rect width="100%" height="100%" fill="white"></rect>
+                            <use xlink:href="#outline" id="lid" fill="black" />
+                        </mask>
+                    </defs>
+                    <g id="eye">
+                        <path d="M0,15.089434 C0,16.3335929 5.13666091,24.1788679 14.9348958,24.1788679 C24.7325019,24.1788679 29.8697917,16.3335929 29.8697917,15.089434 C29.8697917,13.8456167 24.7325019,6 14.9348958,6 C5.13666091,6 0,13.8456167 0,15.089434 Z M14.9348958,22.081464 C11.2690863,22.081464 8.29688487,18.9510766 8.29688487,15.089434 C8.29688487,11.2277914 11.2690863,8.09740397 14.9348958,8.09740397 C18.6007053,8.09740397 21.5725924,11.2277914 21.5725924,15.089434 C21.5725924,18.9510766 18.6007053,22.081464 14.9348958,22.081464 L14.9348958,22.081464 Z M18.2535869,15.089434 C18.2535869,17.0200844 16.7673289,18.5857907 14.9348958,18.5857907 C13.1018339,18.5857907 11.6162048,17.0200844 11.6162048,15.089434 C11.6162048,13.1587835 13.1018339,11.593419 14.9348958,11.593419 C15.9253152,11.593419 14.3271242,14.3639878 14.9348958,15.089434 C15.451486,15.7055336 18.2535869,14.2027016 18.2535869,15.089434 L18.2535869,15.089434 Z"
+                            fill="yellow"></path>
+                        <use xlink:href="#outline" mask="url(#mask)" fill="#FFFFFF" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+
+
+    </div>
+    <md-button class="md-fab" ng-disabled="false" aria-label="Evil Mode" style="position:absolute; bottom:10px; right:10px" ng-click="evilMode=!evilMode">
+        <md-icon md-svg-src="img/devil.svg"></md-icon>
+    </md-button>
 
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-  
+
     <!-- Angular Material Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
-    
+
     <!-- Angular knobs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.10/d3.min.js"></script>
     <script src="https://rawgit.com/RadMie/ng-knob/master/dist/ng-knob.min.js"></script>
     <!-- MQTT -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
-    
+
     <script src="demo.js"></script>
-
-    <!-- Your application bootstrap  -->
-    <script type="text/javascript">
-    
-    
-
-  </script>
 
 </body>
 
