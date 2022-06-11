@@ -11,7 +11,7 @@ Es una alternativa liviana a las maquinas virtuales dado que su nivel de abstrac
 
 ![docker vs VM](/assets/img/container_vs_vm.png)
 
-Suplementado con un orquestador como [Kubernetes](kubernetes.io) esta tecnología es realmente muy poderosa por que nos ayuda en TODAS las etapas del desarrollo de software.
+Suplementado con un orquestador como [Kubernetes](https://kubernetes.io) esta tecnología es realmente muy poderosa por que nos ayuda en TODAS las etapas del desarrollo de software.
 
 ## Objetivo
 
@@ -115,22 +115,13 @@ erDiagram
 
 Registry / registro : servicio que contiene repositorios de imágenes e implementa [Docker Registry API]([HTTP API V2 | Docker Documentation](https://docs.docker.com/registry/spec/api/)). Se puede acceder al registro predeterminado usando un navegador en [Docker Hub](https://hub.docker.com/) o usando el comando  `docker search`.
 
-
-
 Repository / repositorio:  es un conjunto de imágenes de Docker. Un repositorio se puede compartir publicandolo (`docker push`) a un Registry. Las diferentes imágenes del repositorio se pueden etiquetar mediante `tags`.
-
-
-
 
 Tags / etiqueta: Es un alias mutable (que se puede cambiar) que se aplica a una imagen de Docker en un repositorio. Es la forma en la cual se identifican las distintas imágenes dentro de un repositorio. **NO PUEDE HABER DOS IMAGENES CON EL MISMO TAG EN UN MISMO REPOSITORIO. AL SIMO EL TAG MUEVE DE UNA IMAGEN A OTRA COMO EN ESTE ANIMACION**
 
-![docker image tags](G:\src\github\yuudj\yuudj.github.io\assets\img\docker_image_tag.gif)
-
-
+![docker image tags](/assets/img/docker_image_tag.gif)
 
 No hay un método de etiquetado impuesto, es bastante flexiblE. Bien utilizada puedE simplifica mucho el despliegue y mal utilizada te puede dar muchos dolores de cabeza.
-
-
 
 Con este comando etiquetamos la imagen anterior del ejemplo anterior en el repositorio `demo` tag `1.0`. En que registro? en nuestra maquina local, al menos hasta que se publique.
 
@@ -138,7 +129,7 @@ Con este comando etiquetamos la imagen anterior del ejemplo anterior en el repos
 docker tag 07c2a81dfe22 demo:1.0
 ```
 
-Ejemplo , este comando obtiene la imagen del registro [quay.io](quay.io) repositorio `pqsdev/mssql-tools` tag `master`.
+Ejemplo , este comando obtiene la imagen del registro [quay.io](https://quay.io) repositorio `pqsdev/mssql-tools` tag `master`.
 
 ```bash
 docker pull quay.io/pqsdev/mssql-tools:master
