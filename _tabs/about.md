@@ -6,7 +6,7 @@ order: 4
 
 Hola, desde hace tiempo que quiero hacer un blog para diferentes cosas que voy aprendiendo todos los días. Ahora para que me conozcan un poco mas
 
-- Mis dos padres trabajan en computación, se conocieron en el ámbito, con eso tuve el privilegio de siempre tener computadoras alrededor y a donde acudir con mis dudas.
+- Tuve el privilegio de siempre tener computadoras alrededor y a donde acudir con mis dudas. Mis padres estan en el rubro desde los 80's.
 
 - Mi primer programa lo hice a los 8 años con mi mamá en BASIC.
 
