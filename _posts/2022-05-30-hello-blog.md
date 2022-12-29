@@ -4,8 +4,7 @@ date: 2022-05-30 19:00:00 -300
 categories: [github, docker,vscode]
 tags: [github,jekill,website,docker,vscode, devcontainers,github-pages]
 ---
-
-Desde hace tiempo que quiero hacer un blog para ir colocando cosas que aprendi en mis años de experiencia (desde 2002) y lo que aprendo todos los dias.
+Bueno, primer post, esperemos que con el tiempo cada post salga mejor y con mejor calidad.
 
 Para este blog utilice tres tecnologias
 
