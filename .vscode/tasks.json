@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Start jekyll (drafts, future)",
+      "label": "jekyll",
       "command": "bundle",
       "args": [
         "exec",
@@ -11,18 +11,6 @@
         "-w",
         "-D",
         "--future"
-      ],
-      "type": "shell",
-      "problemMatcher": []
-    },
-    {
-      "label": "Start jekyll",
-      "command": "bundle",
-      "args": [
-        "exec",
-        "jekyll",
-        "serve",
-        "-w"
       ],
       "type": "shell",
       "problemMatcher": []
