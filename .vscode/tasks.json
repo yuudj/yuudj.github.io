@@ -10,7 +10,8 @@
         "serve",
         "-w",
         "-D",
-        "--future"
+        "--future",
+        "-l"
       ],
       "type": "shell",
       "problemMatcher": []
