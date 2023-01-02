@@ -8,6 +8,10 @@ categories: [ docker, containers]
 tags: [github,docker,containers,images]
 ---
 
+{% include series.html%}
+
+## OBJETIVO
+
 El objetivo de este post es ahondar mas en los conceptos alrededor de una imagen, como crear una imagen, como publicar una imagen y las buenas practicas para mantener una imagen.
 
 Como describimos en la Parte 1. Una imagen es una colección ordenada de cambios en el sistema de archivos raíz y los parámetros de ejecución correspondientes para usar dentro de un tiempo de ejecución de contenedor. Una imagen normalmente la concatenación de sistemas de archivos en capas apilados uno encima del otro. [ver](https://docs.docker.com/glossary/#container-image).
