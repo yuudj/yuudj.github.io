@@ -1,0 +1,23 @@
+<!-- Series links -->
+{% if page.is_series == true %}
+## SERIE | {{ page.series_title | upcase }}
+
+{% assign posts = site.posts | where: "is_series", true | where: "series_title", page.series_title | sort: 'date' %}
+
+
+<ul class="list-group">
+  {% for post in posts %}
+  {% if post.title == page.title %}
+  <li class="list-group-item list-group-item-action active">
+    <p class="navbar-text bullet-pointer mb-0">{{ post.title }}</p>
+  </li>
+  {% else %}
+  <li class="list-group-item d-flex justify-content-between align-items-center"><a class="" href="{{ post.url }}">{{
+      post.title }} <span class="badge badge-primary badge-pill">{{post.date | date: "%Y - %m - %-d" }}</span></a></li>
+  {% endif %}
+
+
+  {% endfor %}
+</ul>
+
+{% endif %}
