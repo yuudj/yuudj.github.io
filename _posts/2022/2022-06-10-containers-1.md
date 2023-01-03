@@ -15,36 +15,39 @@ tags: [github,docker,containers]
 
 En el siguiente grafico vemos las tres etapas principales
 
-<img src="../../assets/img/diagrams/docker_arch.svg" alt="Diagrama conceptual de docker" width="500px"/>
+<img src="../../assets/img/diagrams/docker_arch.svg" alt="Diagrama conceptual de docker" width="800px"/>
 
 ### CONCEPTOS
 
-<table>
-  <tr>
-    <td>
-      <img src="../../assets/img/logos/docker-image.svg" alt="docker image" width="200px"/>
-    </td>
-    <td>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-auto">
+      <img src="../../assets/img/logos/docker-image.svg" alt="docker image" width="100px"/>
+    </div>
+    <div class="col">
       <strong>IMAGEN</strong> <span>Set de archivos de solo lectura que sirve de plantilla para crear un CONTENEDOR. A menudo, una imagen se basa en otra imagen, con alguna personalización adicional.</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="../../assets/img/logos/docker.svg" alt="docker registry logo" width="200px"/>
-    </td>
-    <td>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-auto">
+      <img src="../../assets/img/logos/docker.svg" alt="docker registry logo" width="100px"/>
+    </div>
+    <div class="col">
       <strong>REGISTRY</strong> <span> Repositorio de imagenes, puede ser publico o privado</span>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="../../assets/img/logos/container.svg" alt="docker container logo" width="200px"/>
-    </td>
-    <td>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-auto">
+      <img src="../../assets/img/logos/container.svg" alt="docker registry logo" width="100px"/>
+    </div>
+    <div class="col">
       <strong>CONTAINER</strong> <span> Es la implementación de una imagen o <b>instancia de una imagen</b>. Mediante el uso de parámetros determinados por la imagen se puede configurar.o</span>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
+</div>
+
+
 
 Los COMANDOS PRINCIPALES de Docker son los siguientes
 
