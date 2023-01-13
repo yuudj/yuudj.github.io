@@ -15,10 +15,9 @@ tags: [github,docker,containers]
 
 En el siguiente grafico vemos las tres etapas principales
 
-<img src="../../assets/img/diagrams/docker_arch.svg" alt="Diagrama conceptual de docker" width="800px"/>
+<img src="../../assets/img/diagrams/containers-intro.svg" alt="Diagrama conceptual de docker" width="800px"/>
 
 ### CONCEPTOS
-
 
 <div class="container">
   <div class="row">
@@ -46,8 +45,6 @@ En el siguiente grafico vemos las tres etapas principales
     </div>
   </div>
 </div>
-
-
 
 Los COMANDOS PRINCIPALES de Docker son los siguientes
 
@@ -94,7 +91,42 @@ Cada uno de los componentes de Docker tiene una API estándar y abierta lo que h
 
 ## INSTANCIANDO UN CONTENEDOR
 
-Hacemos una practica rápida con imágenes PRE EXISTENTES. ¿De donde salen las imágenes pre existentes que vamos a usar?  del hub.docker.com que es el registro de imágenes de Docker por defecto.
+Los contenedores pueden ser instanciados de forma imperativa o declarativa. 
+
+
+
+
+
+<table>
+  <tr>
+    <td><b>IMPERATIVO</b></td>
+    <td colspan='2'>
+ ```bash  
+docker run --name soy-un-nginx -p 8180:80 -d nginx:latest
+ ```
+    </td>
+  </tr>
+  <tr>
+    <td><b>DECLARATIVO</b></td>
+    <td></td>
+    <td>
+      <ul>
+        <li><b>Y</b>AML</li>
+        <li><b>A</b>in’t</li>
+        <li><b>M</b>arkup</li>
+        <li><b>L</b>anguage</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+
+### Imperativa
+
+
+
+Hacemos una practica rápida con imágenes PRE EXISTENTES. ¿De donde salen las imágenes pre existentes que vamos a usar? del hub.docker.com que es el registro de imágenes de Docker por defecto.
 
 Creemos un contenedor a partir de la imagen correspondiente a la ultima versión de NGINX `nginx:latest` (nginx es un servidor web liviano muy utilizado)
 
@@ -117,9 +149,7 @@ CONTAINER ID   IMAGE  ...         PORTS                                   NAMES
 cfa9a43f7c70   nginx  ...         0.0.0.0:8180->80/tcp, :::8180->80/tcp   soy-un-nginx
 ```
 
-También podemos navegar a la URL <http://localhost:8180>
-
-![NGINX Welcome screeen](../../assets/img/nginx_welcome.png)
+También podemos navegar a la URL [http://localhost:8180](http://localhost:8180)
 
 Ahora nos toca hacer un poco de limpieza deteniendo y eliminado el contenedor utilizando CONTAINER ID
 
@@ -141,13 +171,17 @@ Nuevamente vamos de atras para adelante
 - `-d` ejecutar el contenedor en modo *datached*. Es decir que el contenedor continua ejecutándose en segundo plano, aun que cerremos la ventana de consola.
 - `-p 3000:3000` esta opción le dice a Docker que conecte el puerto 3000 del la PC host de Docker con el puerto 3000 del contenedor. El puerto 3000 es expuesto por la imagen de Grafana ¿como lo se? lees la documentación en Docker Hub.
 
-Ahora nuestro Grafana esta expuesto en http://localhost:3000 y luego de autenticarse con el usuario / clave `admin` (si si también sale de la documentación de Grafana) y cambiar la clave
+Ahora nuestro Grafana esta expuesto en [http://localhost:3000](http://localhost:3000) y luego de autenticarse con el usuario / clave `admin` (si si también sale de la documentación de Grafana) y cambiar la clave
 
 TADAAAAA un sistema ejecutándose sin instalar nada.
 
-![Grafana Welcome screeen](../../assets/img/grafana_welcome.png)
+De la misma manera que antes debemos hacer una limpieza, buscando el CONTAINER ID con `docker ps`, detenerlo con `docker stop <<CONTAINER_ID>>` y eliminarlo con `docker rm <<CONTAINER_ID>>`
 
-De la misma manera que antes debemos hacer una limpieza, buscando el CONTAINER ID con `docker ps`, detenerlo con `docker stop <<CONTAINER_ID>>`  y eliminarlo con `docker rm <<CONTAINER_ID>>`
+### Declarativa | docker-compose
+
+
+
+
 
 ## Docker-Compose (*Declarativa*)
 

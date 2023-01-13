@@ -26,14 +26,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.73851712"
-     inkscape:cx="718.33135"
+     inkscape:cx="628.96308"
      inkscape:cy="368.30561"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer3" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2">
     <clipPath
@@ -304,36 +304,6 @@
          height="98"
          id="rect222" />
     </clipPath>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#fill19"
-       id="linearGradient5737"
-       gradientUnits="userSpaceOnUse"
-       x1="115.344"
-       y1="93.449997"
-       x2="115.344"
-       y2="114.988"
-       spreadMethod="pad" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#fill19"
-       id="linearGradient5739"
-       gradientUnits="userSpaceOnUse"
-       x1="115.344"
-       y1="93.449997"
-       x2="115.344"
-       y2="114.988"
-       spreadMethod="pad" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#fill19"
-       id="linearGradient5741"
-       gradientUnits="userSpaceOnUse"
-       x1="115.344"
-       y1="93.449997"
-       x2="115.344"
-       y2="114.988"
-       spreadMethod="pad" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath3980">
@@ -1760,7 +1730,8 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="areas"
-     transform="translate(0.93701202,-0.59663647)">
+     transform="translate(0.93701202,-0.59663647)"
+     sodipodi:insensitive="true">
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:0.333333;fill-rule:evenodd;stroke:none;stroke-width:1.31663;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill;stop-color:#000000"
        id="rect2407"
@@ -1787,13 +1758,11 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-6.536252,-109.14355)"
-     sodipodi:insensitive="true">
+     transform="translate(-6.536252,-109.14355)">
     <g
        clip-path="url(#clipPath4100)"
        id="g278"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)"
-       style="filter:url(#filter6056)">
+       transform="matrix(0.26458333,0,0,0.26458333,-18.459688,116.13543)">
       <g
          clip-path="url(#clip2)"
          id="g276">
@@ -1925,8 +1894,7 @@
        fill="#86c400"
        fill-rule="evenodd"
        id="path280"
-       clip-path="url(#clipPath4094)"
-       style="filter:url(#filter6068)" />
+       clip-path="url(#clipPath4094)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -1940,8 +1908,7 @@
     <g
        clip-path="url(#clipPath4088)"
        id="g354"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)"
-       style="filter:url(#filter6092)">
+       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)">
       <g
          clip-path="url(#clip5)"
          id="g352">
@@ -2086,8 +2053,7 @@
     <g
        clip-path="url(#clipPath4082)"
        id="g398"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)"
-       style="filter:url(#filter6104)">
+       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)">
       <g
          clip-path="url(#clip8)"
          id="g396">
@@ -2182,8 +2148,7 @@
        fill="#7030a0"
        fill-rule="evenodd"
        id="path400"
-       clip-path="url(#clipPath4076)"
-       style="filter:url(#filter6116)" />
+       clip-path="url(#clipPath4076)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -2201,8 +2166,7 @@
        fill="none"
        transform="matrix(0.26458333,0,0,0.26458333,181.62847,179.36805)"
        id="use404"
-       clip-path="url(#clipPath4070)"
-       style="filter:url(#filter6140)" />
+       clip-path="url(#clipPath4070)" />
     <use
        width="100%"
        height="100%"
@@ -2210,8 +2174,7 @@
        fill="none"
        transform="matrix(0.26458333,0,0,0.26458333,235.60347,188.0993)"
        id="use406"
-       clip-path="url(#clipPath4064)"
-       style="filter:url(#filter6152)" />
+       clip-path="url(#clipPath4064)" />
     <use
        width="100%"
        height="100%"
@@ -2219,13 +2182,11 @@
        fill="none"
        transform="matrix(0.26458333,0,0,0.26458333,269.9993,187.57014)"
        id="use408"
-       clip-path="url(#clipPath4058)"
-       style="filter:url(#filter6164)" />
+       clip-path="url(#clipPath4058)" />
     <g
        clip-path="url(#clipPath4052)"
        id="g3728"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)"
-       style="filter:url(#filter6176)">
+       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)">
       <g
          clip-path="url(#clip14)"
          id="g3726">
@@ -10582,8 +10543,7 @@
        fill="#e3298a"
        fill-rule="evenodd"
        id="path3730"
-       clip-path="url(#clipPath4046)"
-       style="filter:url(#filter6188)" />
+       clip-path="url(#clipPath4046)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -10603,8 +10563,7 @@
        fill="#e3298a"
        fill-rule="evenodd"
        id="path3734"
-       clip-path="url(#clipPath4040)"
-       style="filter:url(#filter6212)" />
+       clip-path="url(#clipPath4040)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -10624,8 +10583,7 @@
        fill="#e3298a"
        fill-rule="evenodd"
        id="path3738"
-       clip-path="url(#clipPath4034)"
-       style="filter:url(#filter6236)" />
+       clip-path="url(#clipPath4034)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -10645,8 +10603,7 @@
        fill="#e3298a"
        fill-rule="evenodd"
        id="path3742"
-       clip-path="url(#clipPath4028)"
-       style="filter:url(#filter6260)" />
+       clip-path="url(#clipPath4028)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -10657,66 +10614,6 @@
        x="-15.202044"
        y="-250.10231"
        style="stroke-width:0.264583">PULL</text>
-    <g
-       clip-path="url(#clipPath4022)"
-       id="g3768"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)"
-       style="filter:url(#filter6284)">
-      <g
-         clip-path="url(#clip17)"
-         id="g3766">
-        <g
-           clip-path="url(#clip18)"
-           id="g3764">
-          <path
-             d="m 89.623,55.358 0.089,38.092 70.399,14.952 V 81.88 Z"
-             fill="#767676"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3746" />
-          <path
-             d="m 89.623,55.358 -19.046,11.57 v 35.422 l 19.135,-8.9"
-             fill="#999999"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3748" />
-          <path
-             d="m 121.752,93.984 6.408,1.78 V 75.027 l -6.408,-2.225 z m -6.408,-23.229 -6.408,-2.314 v 22.161 l 6.408,1.78 z m 19.224,26.7 6.23,1.691 0.178,-19.758 -6.408,-2.136 z m -38.359,-10.146 6.408,1.602 V 66.394 l -6.408,-2.136 z m 57.494,-3.56 -6.408,-2.225 v 19.313 l 6.408,1.78 z"
-             fill="#a3a3a3"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3750" />
-          <path
-             d="M 77.074,92.827 73.87,94.696 V 69.509 l 3.204,-1.691 z M 83.393,64.169 80.1,66.305 V 90.78 L 83.393,89 Z"
-             fill="#b3b3b3"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3752" />
-          <path
-             d="m 160.111,108.402 -19.224,6.586 -70.31,-12.638 19.135,-8.9 z"
-             fill="url(#fill19)"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3754"
-             style="fill:url(#linearGradient5737)" />
-          <path
-             d="m 160.111,135.547 -70.755,13.439 0.356,-49.751 70.399,13.083 z"
-             fill="#767676"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3756" />
-          <path
-             d="m 96.209,140.798 v -31.595 l 6.408,0.801 v 29.726 z m 19.135,-3.204 -6.408,1.157 v -27.946 l 6.408,0.979 z m 6.408,-0.979 v -24.208 l 6.408,0.801 v 22.25 z m 19.135,-3.382 -6.319,1.157 v -20.381 l 6.319,0.979 z m 12.994,-2.047 -6.586,1.157 v -16.732 l 6.141,0.801 z"
-             fill="#a3a3a3"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3758" />
-          <path
-             d="M 70.577,137.594 V 108.58 l 19.224,-8.9 v 49.84 z"
-             fill="#999999"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3760" />
-          <path
-             d="m 76.629,137.505 -2.848,-1.424 v -24.564 l 2.848,-1.335 z M 83.482,106.8 80.1,108.491 v 30.972 l 3.293,1.691 V 106.8 Z"
-             fill="#b3b3b3"
-             transform="matrix(1,0,0,1.00102,1116.42,566.585)"
-             id="path3762" />
-        </g>
-      </g>
-    </g>
     <path
        d="m 290.69237,224.7441 v 27.11846 h 5.12498 v -3.3856 l 5.79966,7.58057 -5.79966,7.58031 v -3.38534 h -13.51492 v -35.5084 z"
        stroke="#385d8a"
@@ -10725,8 +10622,7 @@
        fill="#86c400"
        fill-rule="evenodd"
        id="path3770"
-       clip-path="url(#clipPath4016)"
-       style="filter:url(#filter6296)" />
+       clip-path="url(#clipPath4016)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -10737,66 +10633,6 @@
        x="236.51805"
        y="-284.31326"
        style="stroke-width:0.264583">RUN</text>
-    <g
-       clip-path="url(#clipPath4010)"
-       id="g3796"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)"
-       style="filter:url(#filter6320)">
-      <g
-         clip-path="url(#clip21)"
-         id="g3794">
-        <g
-           clip-path="url(#clip22)"
-           id="g3792">
-          <path
-             d="m 89.623,55.358 0.089,38.092 70.399,14.952 V 81.88 Z"
-             fill="#767676"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3774" />
-          <path
-             d="m 89.623,55.358 -19.046,11.57 v 35.422 l 19.135,-8.9"
-             fill="#999999"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3776" />
-          <path
-             d="m 121.752,93.984 6.408,1.78 V 75.027 l -6.408,-2.225 z m -6.408,-23.229 -6.408,-2.314 v 22.161 l 6.408,1.78 z m 19.224,26.7 6.23,1.691 0.178,-19.758 -6.408,-2.136 z m -38.359,-10.146 6.408,1.602 V 66.394 l -6.408,-2.136 z m 57.494,-3.56 -6.408,-2.225 v 19.313 l 6.408,1.78 z"
-             fill="#a3a3a3"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3778" />
-          <path
-             d="M 77.074,92.827 73.87,94.696 V 69.509 l 3.204,-1.691 z M 83.393,64.169 80.1,66.305 V 90.78 L 83.393,89 Z"
-             fill="#b3b3b3"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3780" />
-          <path
-             d="m 160.111,108.402 -19.224,6.586 -70.31,-12.638 19.135,-8.9 z"
-             fill="url(#fill23)"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3782"
-             style="fill:url(#linearGradient5739)" />
-          <path
-             d="m 160.111,135.547 -70.755,13.439 0.356,-49.751 70.399,13.083 z"
-             fill="#767676"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3784" />
-          <path
-             d="m 96.209,140.798 v -31.595 l 6.408,0.801 v 29.726 z m 19.135,-3.204 -6.408,1.157 v -27.946 l 6.408,0.979 z m 6.408,-0.979 v -24.208 l 6.408,0.801 v 22.25 z m 19.135,-3.382 -6.319,1.157 v -20.381 l 6.319,0.979 z m 12.994,-2.047 -6.586,1.157 v -16.732 l 6.141,0.801 z"
-             fill="#a3a3a3"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3786" />
-          <path
-             d="M 70.577,137.594 V 108.58 l 19.224,-8.9 v 49.84 z"
-             fill="#999999"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3788" />
-          <path
-             d="m 76.629,137.505 -2.848,-1.424 v -24.564 l 2.848,-1.335 z M 83.482,106.8 80.1,108.491 v 30.972 l 3.293,1.691 V 106.8 Z"
-             fill="#b3b3b3"
-             transform="matrix(1,0,0,1.00102,947.423,561.585)"
-             id="path3790" />
-        </g>
-      </g>
-    </g>
     <path
        d="m 245.97778,227.38993 v 23.14972 h 5.12498 v -3.38535 l 5.79967,7.58032 -5.79967,7.58031 v -3.38535 h -13.51491 v -31.53965 z"
        stroke="#385d8a"
@@ -10805,8 +10641,7 @@
        fill="#86c400"
        fill-rule="evenodd"
        id="path3798"
-       clip-path="url(#clipPath4004)"
-       style="filter:url(#filter6332)" />
+       clip-path="url(#clipPath4004)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -10817,57 +10652,6 @@
        x="237.04723"
        y="-239.59207"
        style="stroke-width:0.264583">RUN</text>
-    <g
-       clip-path="url(#clipPath3998)"
-       id="g3824"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)"
-       style="filter:url(#filter6356)">
-      <g
-         clip-path="url(#clip25)"
-         id="g3822">
-        <g
-           clip-path="url(#clip26)"
-           id="g3820">
-          <path
-             d="m 864.26,617 0.09,38.52 71.19,15.12 v -26.82 z"
-             fill="#767676"
-             id="path3802" />
-          <path
-             d="M 864.26,617 845,628.7 v 35.82 l 19.35,-9"
-             fill="#999999"
-             id="path3804" />
-          <path
-             d="m 896.75,656.06 6.48,1.8 v -20.97 l -6.48,-2.25 z m -6.48,-23.49 -6.48,-2.34 v 22.41 l 6.48,1.8 z m 19.44,27 6.3,1.71 0.18,-19.98 -6.48,-2.16 z m -38.79,-10.26 6.48,1.62 V 628.16 L 870.92,626 Z m 58.14,-3.6 -6.48,-2.25 v 19.53 l 6.48,1.8 z"
-             fill="#a3a3a3"
-             id="path3806" />
-          <path
-             d="m 851.57,654.89 -3.24,1.89 v -25.47 l 3.24,-1.71 z m 6.39,-28.98 -3.33,2.16 v 24.75 l 3.33,-1.8 z"
-             fill="#b3b3b3"
-             id="path3808" />
-          <path
-             d="m 935.54,670.64 -19.44,6.66 -71.1,-12.78 19.35,-9 z"
-             fill="url(#fill27)"
-             id="path3810"
-             style="fill:url(#fill27)" />
-          <path
-             d="m 935.54,698.09 -71.55,13.59 0.36,-50.31 71.19,13.23 z"
-             fill="#767676"
-             id="path3812" />
-          <path
-             d="m 870.92,703.4 v -31.95 l 6.48,0.81 v 30.06 z m 19.35,-3.24 -6.48,1.17 v -28.26 l 6.48,0.99 z m 6.48,-0.99 v -24.48 l 6.48,0.81 V 698 Z m 19.35,-3.42 -6.39,1.17 v -20.61 l 6.39,0.99 z m 13.14,-2.07 -6.66,1.17 v -16.92 l 6.21,0.81 z"
-             fill="#a3a3a3"
-             id="path3814" />
-          <path
-             d="m 845,700.16 v -29.34 l 19.44,-9 v 50.4 z"
-             fill="#999999"
-             id="path3816" />
-          <path
-             d="m 851.12,700.07 -2.88,-1.44 v -24.84 l 2.88,-1.35 z m 6.93,-31.05 -3.42,1.71 v 31.32 l 3.33,1.71 v -34.74 z"
-             fill="#b3b3b3"
-             id="path3818" />
-        </g>
-      </g>
-    </g>
     <path
        d="m 200.46945,237.44409 v 13.09556 h 5.12498 v -3.38561 l 5.79967,7.58058 -5.79967,7.58031 v -3.38535 h -13.51492 v -21.48549 z"
        stroke="#385d8a"
@@ -10876,8 +10660,7 @@
        fill="#86c400"
        fill-rule="evenodd"
        id="path3826"
-       clip-path="url(#clipPath3992)"
-       style="filter:url(#filter6368)" />
+       clip-path="url(#clipPath3992)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
@@ -10888,66 +10671,6 @@
        x="242.33888"
        y="-194.02448"
        style="stroke-width:0.264583">RUN</text>
-    <g
-       clip-path="url(#clipPath3986)"
-       id="g3852"
-       transform="matrix(0.26458333,0,0,0.26458333,-14.956942,77.503472)"
-       style="filter:url(#filter6392)">
-      <g
-         clip-path="url(#clip29)"
-         id="g3850">
-        <g
-           clip-path="url(#clip30)"
-           id="g3848">
-          <path
-             d="m 89.623,55.358 0.089,38.092 70.399,14.952 V 81.88 Z"
-             fill="#767676"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3830" />
-          <path
-             d="m 89.623,55.358 -19.046,11.57 v 35.422 l 19.135,-8.9"
-             fill="#999999"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3832" />
-          <path
-             d="m 121.752,93.984 6.408,1.78 V 75.027 l -6.408,-2.225 z m -6.408,-23.229 -6.408,-2.314 v 22.161 l 6.408,1.78 z m 19.224,26.7 6.23,1.691 0.178,-19.758 -6.408,-2.136 z m -38.359,-10.146 6.408,1.602 V 66.394 l -6.408,-2.136 z m 57.494,-3.56 -6.408,-2.225 v 19.313 l 6.408,1.78 z"
-             fill="#a3a3a3"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3834" />
-          <path
-             d="M 77.074,92.827 73.87,94.696 V 69.509 l 3.204,-1.691 z M 83.393,64.169 80.1,66.305 V 90.78 L 83.393,89 Z"
-             fill="#b3b3b3"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3836" />
-          <path
-             d="m 160.111,108.402 -19.224,6.586 -70.31,-12.638 19.135,-8.9 z"
-             fill="url(#fill31)"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3838"
-             style="fill:url(#linearGradient5741)" />
-          <path
-             d="m 160.111,135.547 -70.755,13.439 0.356,-49.751 70.399,13.083 z"
-             fill="#767676"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3840" />
-          <path
-             d="m 96.209,140.798 v -31.595 l 6.408,0.801 v 29.726 z m 19.135,-3.204 -6.408,1.157 v -27.946 l 6.408,0.979 z m 6.408,-0.979 v -24.208 l 6.408,0.801 v 22.25 z m 19.135,-3.382 -6.319,1.157 v -20.381 l 6.319,0.979 z m 12.994,-2.047 -6.586,1.157 v -16.732 l 6.141,0.801 z"
-             fill="#a3a3a3"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3842" />
-          <path
-             d="M 70.577,137.594 V 108.58 l 19.224,-8.9 v 49.84 z"
-             fill="#999999"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3844" />
-          <path
-             d="m 76.629,137.505 -2.848,-1.424 v -24.564 l 2.848,-1.335 z M 83.482,106.8 80.1,108.491 v 30.972 l 3.293,1.691 V 106.8 Z"
-             fill="#b3b3b3"
-             transform="matrix(1,0,0,1.00102,507.423,564.585)"
-             id="path3846" />
-        </g>
-      </g>
-    </g>
     <path
        d="m 129.56112,238.23784 v 13.09556 h 5.12498 v -3.38561 l 5.79966,7.58058 -5.79966,7.58031 v -3.38535 h -13.51492 v -21.48549 z"
        stroke="#385d8a"
@@ -10956,8 +10679,7 @@
        fill="#86c400"
        fill-rule="evenodd"
        id="path3854"
-       clip-path="url(#clipPath3980)"
-       style="filter:url(#filter6404)" />
+       clip-path="url(#clipPath3980)" />
     <text
        fill="#ffffff"
        font-family="Calibri, Calibri_MSFontService, sans-serif"
