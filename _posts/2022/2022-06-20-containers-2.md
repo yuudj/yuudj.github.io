@@ -1,5 +1,5 @@
 ---
-title: Containers - PARTE 2 - Imagenes
+title: Containers - Creando y publicando Imagenes
 date: 2022-06-10 19:00:00 -300
 published: false
 is_series: true
@@ -18,7 +18,7 @@ Como describimos en la Parte 1. Una imagen es una colección ordenada de cambios
 
 ## REGISTRY | REPOSITORY  | TAG
 
-Estos tres conceptos no son muy necesarios... hasta que queres publicar una imagen en un repositorio publico....
+Tres conceptos necesarios para publicar imágenes
 
 ```mermaid
 erDiagram
@@ -30,11 +30,11 @@ Registry / registro : servicio que contiene repositorios de imágenes e implemen
 
 Repository / repositorio:  es un conjunto de imágenes de Docker. Un repositorio se puede compartir publicandolo (`docker push`) a un Registry. Las diferentes imágenes del repositorio se pueden etiquetar mediante `tags`.
 
-Tags / etiqueta: Es un alias mutable (que se puede cambiar) que se aplica a una imagen de Docker en un repositorio. Es la forma en la cual se identifican las distintas imágenes dentro de un repositorio. **NO PUEDE HABER DOS IMAGENES CON EL MISMO TAG EN UN MISMO REPOSITORIO. AL SIMO EL TAG MUEVE DE UNA IMAGEN A OTRA COMO EN ESTE ANIMACION**
+Tags / etiqueta: Es un alias mutable (que se puede cambiar) que se aplica a una imagen de Docker en un repositorio. Es la forma en la cual se identifican las distintas imágenes dentro de un repositorio. **NO PUEDE HABER DOS IMAGENES CON EL MISMO TAG EN UN MISMO REPOSITORIO. EL TAG de MUEVE DE UNA IMAGEN A OTRA COMO EN ESTE ANIMACION**
 
-![docker image tags](/assets/img/docker_image_tag.gif)
+![docker image tags](../../assets/img/docker_image_tag.gif)
 
-No hay un método de etiquetado impuesto, es bastante flexiblE. Bien utilizada puedE simplifica mucho el despliegue y mal utilizada te puede dar muchos dolores de cabeza.
+No hay un método de etiquetado impuesto, es bastante flexible. Bien utilizada puede simplifica mucho el despliegue y mal utilizada te puede dar muchos dolores de cabeza.  
 
 Con este comando etiquetamos la imagen anterior del ejemplo anterior en el repositorio `demo` tag `1.0`. En que registro? en nuestra maquina local, al menos hasta que se publique.
 
@@ -53,6 +53,10 @@ docker pull quay.io/pqsdev/mssql-tools:master
 - **CUANDO SE ESPECIFICA REPOSITORIO Y NO SE ESPCIFICA UN TAG QUEDA COMO :latest**
 
 - **NO ES BUENA IDEA CONSUMIR IMAGENS DE TERCEROS CON LA ETIQUETA LATEST, POR UQE SE PUEDE ACTUALIZAR LA VERSION SIN QUE LO SEPAMOS**
+
+## Empaquetar aplicación
+
+Para empaquetar una aplicacion necesitamos crear un Dockerfile y contiene las intrucciones para crear una imagen.
 
 Para entender mejor este concepto veamos como se construye una imagen de Docker
 
@@ -104,4 +108,10 @@ Son 4 pasos , cada paso genera una nueva "CAPA" que altera el sistema de archivo
 | 3    | `RUN apt-get -y install ssh vim` | b17789eaaf7b      |     |
 | 4    | `COPY ./app /app 07c2a81dfe22`   | 07c2a81dfe22      |     |
 
-Ese ultimo digest es el Image ID. el identificador unico de la imagen.
+Ese ultimo digest es el Image ID. el identificador único de la imagen.
+
+## Compilar aplicación
+
+Generalmente las aplicaciones requieren de un proceso de compilación para generar los artifacts (archivos resultantes de la compilación) a empaquetar. Esto se logra con un [*Multi-stage build*](https://docs.docker.com/build/building/multi-stage/)
+
+## Publicar aplicación
