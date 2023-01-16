@@ -93,45 +93,11 @@ Cada uno de los componentes de Docker tiene una API estándar y abierta lo que h
 
 Los contenedores pueden ser instanciados de forma imperativa o declarativa.
 
-<table>
-  <tr>
-    <td><b>IMPERATIVO</b></td>
-    <td colspan='2'>
- <code class="language-bash highlighter-rouge"  style="display: block; white-space: pre-wrap">
-docker run --name soy-un-nginx -p 8180:80 -d nginx:latest
- </code>
-    </td>
-  </tr>
-  <tr>
-    <td><b>DECLARATIVO</b></td>
-    <td>
-    <code class="language-yaml highlighter-rouge" style="display: block; white-space: pre-wrap"  >
-# docker-compose.yaml
-version: ‘3.9'
-
-services:
-  grafana:
-    image: grafana/grafana:latest
-    restart: always
-    ports:
-      - “3001:3000"
- </code>
-    </td>
-    <td>
-      <ul>
-        <li><b>Y</b>AML</li>
-        <li><b>A</b>in’t</li>
-        <li><b>M</b>arkup</li>
-        <li><b>L</b>anguage</li>
-      </ul>
-    </td>
-  </tr>
-
 </table>
 
 ### Imperativa
 
-Cuando se instancia un contenedor con una o varias lineas de comandos . Este metodo es interactivo y util cuando se esta aprendiendo.
+Cuando se instancia un contenedor con una o varias líneas de comandos . Este método es interactivo y útil cuando se esta aprendiendo.
 
 Podemos hacer una practica rápida con imágenes PRE EXISTENTES. ¿De donde salen las imágenes pre existentes que vamos a usar? del hub.docker.com que es el registro de imágenes de Docker por defecto.
 
@@ -186,7 +152,7 @@ De la misma manera que antes debemos hacer una limpieza, buscando el CONTAINER I
 
 ### Declarativa | docker-compose
 
-En el metodo decalrativo generamos un manifiesto (`docker-compose.yaml`)  e instanciamos todo con el comando `docker-compose`.
+En el método declarativo generamos un manifiesto (`docker-compose.yaml`)  e instanciamos todo con el comando `docker-compose`.
 
 
 
@@ -202,9 +168,9 @@ El manifiesto esta en un formato YAML es un nombre recursivo, como GNU (GNU not 
 
 
 
-YAML es un formato de representacion de datos generico, parecido a JSON. `docker-compose` [tiene un esquema o especificación ](https://docs.docker.com/compose/compose-file/) que debe ser respetada para que funcione correctamente.
+YAML es un formato de representación de datos genérico, parecido a JSON. `docker-compose` [tiene un esquema o especificación ](https://docs.docker.com/compose/compose-file/) que debe ser respetada para que funcione correctamente.
 
-Para instanciar el ejemplo anterior con Granafa debemos crear un archivo YAML por ejemplo `docker-compose.yaml`
+Para instanciar el ejemplo anterior con Grafana debemos crear un archivo YAML por ejemplo `docker-compose.yaml`
 
 ```yaml
 version: ‘3.9'
