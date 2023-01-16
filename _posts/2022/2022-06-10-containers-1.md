@@ -91,24 +91,32 @@ Cada uno de los componentes de Docker tiene una API estándar y abierta lo que h
 
 ## INSTANCIANDO UN CONTENEDOR
 
-Los contenedores pueden ser instanciados de forma imperativa o declarativa. 
-
-
-
-
+Los contenedores pueden ser instanciados de forma imperativa o declarativa.
 
 <table>
   <tr>
     <td><b>IMPERATIVO</b></td>
     <td colspan='2'>
- ```bash  
+ <code class="language-bash highlighter-rouge"  style="display: block; white-space: pre-wrap">
 docker run --name soy-un-nginx -p 8180:80 -d nginx:latest
- ```
+ </code>
     </td>
   </tr>
   <tr>
     <td><b>DECLARATIVO</b></td>
-    <td></td>
+    <td>
+    <code class="language-yaml highlighter-rouge" style="display: block; white-space: pre-wrap"  >
+# docker-compose.yaml
+version: ‘3.9'
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    restart: always
+    ports:
+      - “3001:3000"
+ </code>
+    </td>
     <td>
       <ul>
         <li><b>Y</b>AML</li>
@@ -118,15 +126,14 @@ docker run --name soy-un-nginx -p 8180:80 -d nginx:latest
       </ul>
     </td>
   </tr>
+
 </table>
-
-
 
 ### Imperativa
 
+Cuando se instancia un contenedor con una o varias lineas de comandos . Este metodo es interactivo y util cuando se esta aprendiendo.
 
-
-Hacemos una practica rápida con imágenes PRE EXISTENTES. ¿De donde salen las imágenes pre existentes que vamos a usar? del hub.docker.com que es el registro de imágenes de Docker por defecto.
+Podemos hacer una practica rápida con imágenes PRE EXISTENTES. ¿De donde salen las imágenes pre existentes que vamos a usar? del hub.docker.com que es el registro de imágenes de Docker por defecto.
 
 Creemos un contenedor a partir de la imagen correspondiente a la ultima versión de NGINX `nginx:latest` (nginx es un servidor web liviano muy utilizado)
 
@@ -179,15 +186,11 @@ De la misma manera que antes debemos hacer una limpieza, buscando el CONTAINER I
 
 ### Declarativa | docker-compose
 
+En el metodo decalrativo generamos un manifiesto (`docker-compose.yaml`)  e instanciamos todo con el comando `docker-compose`.
 
 
 
-
-## Docker-Compose (*Declarativa*)
-
-El método anterior se denomina método IMPERATIVO, donde le ORDENAMOS a Docker que haga cosas por nosotros. Hay una forma alternativa de instanciar uno o varios contenedores utilizando un archivo YAML y el programa `docker-compose`.
-
-YAML es un nombre recursivo, como GNU (GNU not UNIX)
+El manifiesto esta en un formato YAML es un nombre recursivo, como GNU (GNU not UNIX) 
 
 - **Y**AML
 
@@ -197,7 +200,11 @@ YAML es un nombre recursivo, como GNU (GNU not UNIX)
 
 - **L**anguage
 
-Para instanciar el ejemplo anterior con granafa debemos crear un archivo YAML por ejemplo `grafana.yaml`
+
+
+YAML es un formato de representacion de datos generico, parecido a JSON. `docker-compose` [tiene un esquema o especificación ](https://docs.docker.com/compose/compose-file/) que debe ser respetada para que funcione correctamente.
+
+Para instanciar el ejemplo anterior con Granafa debemos crear un archivo YAML por ejemplo `docker-compose.yaml`
 
 ```yaml
 version: ‘3.9'
@@ -209,5 +216,13 @@ services:
     ports:
       - “3001:3000"
 ```
+
+Finalmente ejecutar el comando
+
+```bash
+docker compose up -d
+```
+
+
 
 Si navegamos a http://localhost:3001 tendremos la pantalla de login de Grafana
