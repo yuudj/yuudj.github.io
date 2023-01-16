@@ -2,7 +2,7 @@
 title: Hola Mundo
 date: 2022-05-30 19:00:00 -300
 categories: [github, docker,vscode]
-tags: [github,jekill,website,docker,vscode, devcontainers,github-pages]
+tags: [github,jekyll,website,docker,vscode, devcontainers,github-pages]
 ---
 Bueno, primer post, esperemos que con el tiempo cada post salga mejor y con mejor calidad.
 

@@ -3,15 +3,18 @@ title: Containers - PARTE 2 - Imagenes
 date: 2022-06-10 19:00:00 -300
 published: false
 is_series: true
-series_title: "Containers"
+series_title: "Contenedores"
 categories: [ docker, containers]
 tags: [github,docker,containers,images]
 ---
 
+{% include series.html%}
+
+## INTRO
+
 El objetivo de este post es ahondar mas en los conceptos alrededor de una imagen, como crear una imagen, como publicar una imagen y las buenas practicas para mantener una imagen.
 
 Como describimos en la Parte 1. Una imagen es una colección ordenada de cambios en el sistema de archivos raíz y los parámetros de ejecución correspondientes para usar dentro de un tiempo de ejecución de contenedor. Una imagen normalmente la concatenación de sistemas de archivos en capas apilados uno encima del otro. [ver](https://docs.docker.com/glossary/#container-image).
-
 
 ## REGISTRY | REPOSITORY  | TAG
 
@@ -50,7 +53,6 @@ docker pull quay.io/pqsdev/mssql-tools:master
 - **CUANDO SE ESPECIFICA REPOSITORIO Y NO SE ESPCIFICA UN TAG QUEDA COMO :latest**
 
 - **NO ES BUENA IDEA CONSUMIR IMAGENS DE TERCEROS CON LA ETIQUETA LATEST, POR UQE SE PUEDE ACTUALIZAR LA VERSION SIN QUE LO SEPAMOS**
-
 
 Para entender mejor este concepto veamos como se construye una imagen de Docker
 
