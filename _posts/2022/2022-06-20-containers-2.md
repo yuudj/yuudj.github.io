@@ -25,7 +25,7 @@ erDiagram
     REPOSITORY||--|{ TAG : contains
 ```
 
-**Registry / registro:** Es **UN SERVICIO** que ALMACENA uno o varios repositorios de imágenes e implementa [HTTP API V2 ](https://docs.docker.com/registry/spec/api/). Se puede acceder al registro predeterminado usando un navegador en [Docker Hub](https://hub.docker.com/) o usando el comando  `docker search`. Como el la API del docker registry es abiesta hay OTROS repositorios públicos como quay.io.
+**Registry / registro :** Es **UN SERVICIO**  que ALMACENA uno o varios repositorios de imágenes e implementa [HTTP API V2 | Docker Documentation](https://docs.docker.com/registry/spec/api/). Se puede acceder al registro predeterminado usando un navegador en [Docker Hub](https://hub.docker.com/) o usando el comando  `docker search`. Como el la API del docker registry es abiesta hay OTROS repositorios públicos como quay.io.
 
 **Repository / repositorio**:  es un conjunto de versiones de una misma imagen de Docker. O de imágenes de Docker con un mismo nombre. Ejemplo [Docker NGINX](https://hub.docker.com/_/nginx/tags) es un repositorio en https://hub.docker.com/ que almacena todas las versiones de NGINX.
 
