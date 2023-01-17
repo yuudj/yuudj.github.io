@@ -149,13 +149,11 @@ Para publicar una imagen
 
 En [quay.io](https://quay.io) pueden crear un usuario nuevo utilizando las credenciales de [GitHub.com](https://github.com). Esto tiene una ventaja por que depsues se puede hacer integracion continua desde sus repos de GitHub :D.
 
-Una vez autenticados deben crear un Registry para la imagen. 
+Una vez autenticados deben crear un Registry para la imagen.
 
----
 
-**IMPORTANTE :** UN REGISTRY POR SOFTWARE. NO HAGAN `imagen:frontend` e `imagen:backend` esos son dos https://quay.io/repository/
-
----
+> UN REGISTRY POR COMPONENTE DE SOFTWARE. NO HAGAN `imagen:frontend` e `imagen:backend` esos son dos repositorios separados
+{: .prompt-danger }
 
 ![Desktop View](../../assets/img/2023/quay.io.new.repo.png){: w="800"}
 
@@ -179,13 +177,13 @@ RUN apt-get update
 RUN apt-get -y install ssh vim
 ```
 
-Compilamos el Dockerfile con el nombre del repositorio, en mi caso 
+Compilamos el Dockerfile con el nombre del repositorio, en mi caso
 
 ```bash
 docker build -t quay.io/yuudj0/debian-ssh-vim .
 ```
 
-Luego debemos autenticarnos en Quay.io utilizando 
+Luego debemos autenticarnos en Quay.io utilizando
 
 ```bash
 $ docker login quay.io
@@ -194,7 +192,7 @@ Password: TuPasswordSuperSecreto
 Login Succeeded
 ```
 
-Finalmente hacemos un push de la imagen 
+Finalmente hacemos un push de la imagen
 
 ```bash
 $ docker push quay.io/yuudj0/debian-ssh-vim
@@ -208,9 +206,9 @@ latest: digest: sha256:290131edbda99256ff6f0672d11b816de08691747c4719a3298923f11
 
 ![Quay imagen publicada](../../assets/img/2023/quay.io.tags-1.png)
 
-Como no le agregamos tags a la imagen automaticamente quedo con el tag `latest`. Podemos cambiar esto si 
+Como no le agregamos tags a la imagen automaticamente quedo con el tag `latest`. Podemos cambiar esto si
 
-- Al compilar la imagen especificamos un tag 
+- Al compilar la imagen especificamos un tag
 
 - Agregamos un tag y luego hacemos el push utilizando el tag
 
