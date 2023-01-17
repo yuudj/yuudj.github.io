@@ -15,7 +15,7 @@ tags: [github,docker,containers]
 
 En el siguiente grafico vemos las tres etapas principales
 
-<img src="../../assets/img/diagrams/containers-intro.svg" alt="Diagrama conceptual de docker" width="800px"/>
+![Desktop View](../../assets/img/diagrams/containers-intro.svg){: w="800"}
 
 ### CONCEPTOS
 
@@ -67,7 +67,7 @@ Es una alternativa liviana a las maquinas virtuales dado que su nivel de abstrac
 
 Docker tiene los siguientes componentes PRINCIPALES
 
-![docker PLATFORM](../../assets/img/docker_suite.svg)
+![Docker Platform](../../assets/img/docker_suite.svg)
 
 - `docker-host | Docker Engine | Docker` : Un servidor donde corre Docker encargado de ejecutar los comandos de coker como BUILD, PULL, PUSH y RUN
 - `docker-cli`: interface de línea de comandos de Docker. En pocas palabras lo que usamos para enviar comandos al Docker Engine
@@ -93,7 +93,7 @@ Cada uno de los componentes de Docker tiene una API estándar y abierta lo que h
 
 Los contenedores pueden ser instanciados de forma imperativa o declarativa.
 
-</table>
+
 
 ### Imperativa
 
@@ -156,7 +156,7 @@ En el método declarativo generamos un manifiesto (`docker-compose.yaml`)  e ins
 
 
 
-El manifiesto esta en un formato YAML es un nombre recursivo, como GNU (GNU not UNIX) 
+El manifiesto esta en un formato YAML es un nombre recursivo, como GNU (GNU not UNIX)
 
 - **Y**AML
 
