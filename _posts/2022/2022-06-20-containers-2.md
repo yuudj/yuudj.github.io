@@ -225,7 +225,7 @@ a9099c3159f5: Layer already exists
 v1.0: digest: sha256:290131edbda99256ff6f0672d11b816de08691747c4719a3298923f11b25ee09 size: 953
 ```
 
-![Quay imagen publicada con un tag adicional](../../assets/img/2023/quay.io.tags-1.png)
+![Quay imagen publicada con un tag adicional](../../assets/img/2023/quay.io.tags-2.png)
 
 En este caso los digest coinciden por que la imagen es la misma, es decir que `latest=v1.0`
 
