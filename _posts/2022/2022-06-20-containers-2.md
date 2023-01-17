@@ -1,5 +1,5 @@
 ---
-title: Containers 2 - Imagenes
+title: Containers - PARTE 2 - Imágenes
 date: 2022-06-10 19:00:00 -300
 published: true
 is_series: true
@@ -9,7 +9,7 @@ tags: [github,docker,containers,images]
 mermaid: true
 ---
 
-Este posts es parte de una serie. El objetivo de este post en particulaes es ahondar en los conceptos alrededor de una imagen, como crear una imagen y como publicar una imagen.
+Este posts es parte de una serie. El objetivo de este post en particulares es ahondar en los conceptos alrededor de una imagen, como crear una imagen y como publicar una imagen.
 
 {% include series.html%}
 
@@ -17,7 +17,7 @@ Este posts es parte de una serie. El objetivo de este post en particulaes es aho
 
 Una imagen es una colección ordenada de cambios en el sistema de archivos raíz y los parámetros de ejecución correspondientes para usar dentro de un tiempo de ejecución de contenedor. Una imagen normalmente la concatenación de sistemas de archivos en capas apilados uno encima del otro. [ver](https://docs.docker.com/glossary/#container-image).
 
-Hay tres conceptos adicionales que se deben tener en cuenta al momento de publicar imagenes
+Hay tres conceptos adicionales que se deben tener en cuenta al momento de publicar imágenes
 
 ```mermaid
 erDiagram
@@ -27,7 +27,7 @@ erDiagram
 
 **Registry / registro :** Es **UN SERVICIO**  que ALMACENA uno o varios repositorios de imágenes e implementa [HTTP API V2 | Docker Documentation](https://docs.docker.com/registry/spec/api/). Se puede acceder al registro predeterminado usando un navegador en [Docker Hub](https://hub.docker.com/) o usando el comando  `docker search`. Como el la API del docker registry es abiesta hay OTROS repositorios públicos como quay.io.
 
-**Repository / repositorio**:  es un conjunto de versiones de una misma imagen de Docker. O de imagenes de docker con un mismo nombre. Ejemplo [Docker NGINX](https://hub.docker.com/_/nginx/tags) es un repositorio en https://hub.docker.com/ que almacena todas las versiones de NGINX.
+**Repository / repositorio**:  es un conjunto de versiones de una misma imagen de Docker. O de imágenes de Docker con un mismo nombre. Ejemplo [Docker NGINX](https://hub.docker.com/_/nginx/tags) es un repositorio en https://hub.docker.com/ que almacena todas las versiones de NGINX.
 
 **Nombre**: Todas las imágenes deben tener un nombre. Se debe especificar al momento de compilar, si la imagen ha de ser publicada el nombre debe coincidir con la URL del repositorio. Si
 
@@ -69,7 +69,7 @@ Para empaquetar una aplicación necesitamos crear un `Dockerfile` que contiene l
 
 | Comando                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `FROM <image>[:<tag> \| @digest]`                     | Imagen base para la compilación, puede ser un SO (`FROM debian`) o un  SO + alguna plataforma (`FROM node:19`).<br/>-Debe ser la primera instrucción NO COMENTADA del Dockerfile.<br/>-Puede aparecer muchas veces en un mismo Dockerfile. Por ejemplo en un multi-sage build<br/>-El `tag` o `@digest` son opcionales, si se omiten se asume el tag `latest`                                                                                                                                                                                                                                                                                      |
+| `FROM <image>[:<tag> \| @digest]`                     | - Imagen base para la compilación, puede ser un SO (`FROM debian`) o un  SO + alguna plataforma (`FROM node:19`).<br/>-Debe ser la primera instrucción NO COMENTADA del Dockerfile.<br/>-Puede aparecer muchas veces en un mismo Dockerfile. Por ejemplo en un multi-sage build<br/>-El `tag` o `@digest` son opcionales, si se omiten se asume el tag `latest`                                                                                                                                                                                                                                                                                    |
 | `MANTAINER [email]`                                   | Persona que mantiene la imagen (OPCIONAL)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `COPY <src>... <dest>`                                | - Agrega archivos/directorios desde la fuente `src` al sistema de archivos de la imagen en el path indicado `dest`.<br/>- Los archivos o directorio de `src`  deben ser relativo al directorio del CONTEXTO del build<br/>- `src`puede contener comodines utilizando la funcion de GO [filepath.Match](https://pkg.go.dev/path/filepath#Match) <br/>- `dest` es un path absoluto o un path relativo a `WORKDIR`<br/>- Si `dest` no existe, se crea junto con todos los directorios faltantes en el path<br/>**(SE PREFIERE COPY ANTES QUE ADD POR SU SIMPLICIDAD)**                                                                                |
 | `ADD <src> ... <dest>`                                | - Agrega archivos/directorios desde la fuente `src` al sistema de archivos de la imagen en el path indicado `dest`.<br/>- `src` puede ser una URL o un archivo  `.tar` que se extrae automáticamente (1)<br/>- si `src` es un archivo o directorio debe ser relativo al directorio del CONTEXTO del build<br/>- `src`puede contener comodines utilizando la funcion de GO [filepath.Match](https://pkg.go.dev/path/filepath#Match) <br/>- `dest` es un path absoluto o un path relativo a `WORKDIR`<br/>- Si `dest` no existe, se crea junto con todos los directorios faltantes en el path                                                        |
@@ -147,13 +147,12 @@ Para publicar una imagen
 
 - Hacer un PUSH de la imagen
 
-En [quay.io](https://quay.io) pueden crear un usuario nuevo utilizando las credenciales de [GitHub.com](https://github.com). Esto tiene una ventaja por que depsues se puede hacer integracion continua desde sus repos de GitHub :D.
+En [quay.io](https://quay.io) pueden crear un usuario nuevo utilizando las credenciales de [GitHub.com](https://github.com). Esto tiene una ventaja por que después se puede hacer integración continua desde sus repos de GitHub :D.
 
 Una vez autenticados deben crear un Registry para la imagen.
 
-
 > UN REGISTRY POR COMPONENTE DE SOFTWARE. NO HAGAN `imagen:frontend` e `imagen:backend` esos son dos repositorios separados
-{: .prompt-danger }
+> {: .prompt-danger }
 
 ![Desktop View](../../assets/img/2023/quay.io.new.repo.png){: w="800"}
 
@@ -161,7 +160,7 @@ Una vez autenticados deben crear un Registry para la imagen.
 
 - El repositorio es publico, si quieren uno privado hay que pagar
 
-- Origen del Docker File, en este caso optaremos por la opcion `Empty repository`para luego hacer un push de la imagen compilada localmente.
+- Origen del Docker File, en este caso optaremos por la opción `Empty repository`para luego hacer un push de la imagen compilada localmente.
 
 Si generaron el usuario de Quay con GitHub van a tener uqe generar un password encriptado para `docker login`. En el margen superior derecho hagan click en su nombre de usuario y `Account Settings`.  Lugo `Generate Encrypted Password`
 
@@ -206,13 +205,13 @@ latest: digest: sha256:290131edbda99256ff6f0672d11b816de08691747c4719a3298923f11
 
 ![Quay imagen publicada](../../assets/img/2023/quay.io.tags-1.png)
 
-Como no le agregamos tags a la imagen automaticamente quedo con el tag `latest`. Podemos cambiar esto si
+Como no le agregamos tags a la imagen automáticamente quedo con el tag `latest`. Podemos cambiar esto si
 
 - Al compilar la imagen especificamos un tag
 
 - Agregamos un tag y luego hacemos el push utilizando el tag
 
-La ultima opcion seria algo asi
+La ultima opción seria algo así:
 
 ```bash
 # agregamos el tag :v1.0 a la imagen quay.io/yuudj0/debian-ssh-vim:latest
@@ -229,7 +228,7 @@ v1.0: digest: sha256:290131edbda99256ff6f0672d11b816de08691747c4719a3298923f11b2
 
 En este caso los digest coinciden por que la imagen es la misma, es decir que `latest=v1.0`
 
-## Footnotes
+## Links
 
 1) Best practices for writing Dockerfiles | Docker Documentation]([Best practices for writing Dockerfiles | Docker Documentation](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/))
 2) [Repositorio de ejemplo creado](https://quay.io/repository/yuudj0/debian-ssh-vim)
