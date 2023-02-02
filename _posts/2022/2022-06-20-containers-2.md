@@ -25,7 +25,7 @@ erDiagram
     REPOSITORY||--|{ TAG : contains
 ```
 
-**Registry / registro :** Es **UN SERVICIO**  que ALMACENA uno o varios repositorios de imágenes e implementa [HTTP API V2 | Docker Documentation](https://docs.docker.com/registry/spec/api/). Se puede acceder al registro predeterminado usando un navegador en [Docker Hub](https://hub.docker.com/) o usando el comando  `docker search`. Como el la API del docker registry es abiesta hay OTROS repositorios públicos como quay.io.
+**Registry / registro :** Es **UN SERVICIO**  que ALMACENA uno o varios repositorios de imágenes e implementa [Docker HTTP API V2](https://docs.docker.com/registry/spec/api). Se puede acceder al registro predeterminado usando un navegador en [Docker Hub](https://hub.docker.com/) o usando el comando  `docker search`. Como el la API del docker registry es abiesta hay OTROS repositorios públicos como quay.io.
 
 **Repository / repositorio**:  es un conjunto de versiones de una misma imagen de Docker. O de imágenes de Docker con un mismo nombre. Ejemplo [Docker NGINX](https://hub.docker.com/_/nginx/tags) es un repositorio en https://hub.docker.com/ que almacena todas las versiones de NGINX.
 
@@ -41,7 +41,9 @@ docker pull quay.io/keycloak/keycloak-x@sha256:a6b7be1808b8443dde696c5f108be1cb6
 **Tags / Etiqueta**: Es un alias mutable (que se puede cambiar) que se aplica a una imagen de Docker en un repositorio. Es la forma en la cual se identifican las distintas imágenes dentro de un repositorio.
 
 ```bash
-# obtiene la imagen del registro https://quay.io, repositorio `pqsdev/mssql-tools`, tag `master`.
+# obtiene la imagen del registro https://quay.io, 
+# repositorio `pqsdev/mssql-tools`, 
+# tag `master`.
 docker pull quay.io/pqsdev/mssql-tools:master
 ```
 
@@ -49,7 +51,7 @@ docker pull quay.io/pqsdev/mssql-tools:master
 
 ![docker image tags](../../assets/img/docker_image_tag.gif)
 
-No hay un método de etiquetado impuesto, es bastante flexible. Bien utilizada puede simplifica mucho el despliegue y mal utilizada te puede dar muchos dolores de cabeza.
+No hay un método de etiquetado impuesto, es bastante flexible. Bien utilizado puede simplifica mucho el despliegue y mal utilizado puede dar muchos dolores de cabeza.
 
 Con este comando etiquetamos la imagen anterior del ejemplo anterior en el repositorio `demo` tag `1.0`. En que registro? en nuestra maquina local, al menos hasta que se publique.
 
@@ -65,7 +67,7 @@ docker tag 07c2a81dfe22 demo:1.0
 
 ## Empaquetar aplicación | Dockerfile
 
-Para empaquetar una aplicación necesitamos crear un `Dockerfile` que contiene las instrucciones para crear una imagen. Dichas instrucciones estan documentadas en [Dockerfile reference | Docker Documentation](https://docs.docker.com/engine/reference/builder/)).
+Para empaquetar una aplicación necesitamos crear un `Dockerfile` que contiene las instrucciones para crear una imagen. Dichas instrucciones estan documentadas en [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
 | Comando                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
