@@ -2,6 +2,8 @@
 {% if page.is_series == true %}
 ## SERIE | {{ page.series_title | upcase }}
 
+Este posts es parte de una serie:
+
 {% assign posts = site.posts | where: "is_series", true | where: "series_title", page.series_title | sort: 'date' %}
 
 

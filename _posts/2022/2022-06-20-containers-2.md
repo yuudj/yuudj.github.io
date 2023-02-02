@@ -9,7 +9,7 @@ tags: [github,docker,containers,images]
 mermaid: true
 ---
 
-Este posts es parte de una serie. El objetivo de este post en particulares es ahondar en los conceptos alrededor de una imagen, como crear una imagen y como publicar una imagen.
+El objetivo de este post en particular es ahondar en los conceptos alrededor de una imagen, como crear una imagen y como publicar una imagen.
 
 {% include series.html%}
 
