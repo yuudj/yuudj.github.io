@@ -46,4 +46,3 @@ This work is published under [MIT][mit] License.
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
 
 
-![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
