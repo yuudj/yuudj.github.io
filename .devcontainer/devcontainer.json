@@ -4,7 +4,7 @@
   "name": "Jekyll",
   "image": "mcr.microsoft.com/devcontainers/base:bullseye",
   "features": {
-    "mcr.microsoft.com/devcontainers/jekyll:3.2-buste": {
+    "mcr.microsoft.com/devcontainers/jekyll:3.2-buster": {
       "version": "3.1.3"
     }
   },
