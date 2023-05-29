@@ -12,10 +12,18 @@
 
 # bundler cache
 _site
-vendor
+/vendor
+*-cache/
+.jekyll-metadata
+
 
 # rubygem
+.bundle/
+.byebug_history
+.ruby-gemset
+.ruby-version
 *.gem
+Gemfile.lock
 
 # npm dependencies
 node_modules
