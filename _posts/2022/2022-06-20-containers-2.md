@@ -217,8 +217,8 @@ La ultima opción seria algo así:
 
 ```bash
 # agregamos el tag :v1.0 a la imagen quay.io/yuudj0/debian-ssh-vim:latest
-docker tag quay.io/yuudj0/debian-ssh-vim:latest quay.io/yuudj0/debian-ssh-vim:v1.0
-docker push quay.io/yuudj0/debian-ssh-vim:v1.0
+$ docker tag quay.io/yuudj0/debian-ssh-vim:latest quay.io/yuudj0/debian-ssh-vim:v1.0
+$ docker push quay.io/yuudj0/debian-ssh-vim:v1.0
 The push refers to repository [quay.io/yuudj0/debian-ssh-vim]
 e14ddc80a03e: Layer already exists
 06a7d063e98a: Layer already exists
