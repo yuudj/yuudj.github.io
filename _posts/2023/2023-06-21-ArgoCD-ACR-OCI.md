@@ -1,6 +1,6 @@
 ---
 title: ArgoCD + Azure Container Registry + OCI + HELM Charts
-date: 2023-06-22 19:00:00 -300
+date: 2023-06-21 19:00:00 -300
 published: true
 categories: [ argocd, azure, helm, devOps]
 tags: [ argocd, azure, helm,oci, devOps]
