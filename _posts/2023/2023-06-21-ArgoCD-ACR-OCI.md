@@ -56,7 +56,7 @@ variables:
   - name: registryServerName
     value:  "$(registryName).azurecr.io"
   - name: projectName
-    value:  "efunds"
+    value:  "myapp-chart"
   - name: helmChartVersion
     value:  1.0.'$(Build.BuildId)'
     # si usamos trunk base development el buils seria desde release/build y podemos usar algo como $(build.sourceBranchName)
