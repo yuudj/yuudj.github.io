@@ -131,7 +131,7 @@ $ docker stop cfa9a43f7c70
 $ docker rm cfa9a43f7c70
 ```
 
-Emocionante? no? ... ok no vamos a ejecutar algo un poquito mas rimbombante. Grafana es un software de visualizacion que se conecta a bases de datos no relacionales como infludd, elasticsearch o prometheus. ¿No las conocen? ya las van a conocer
+Emocionante? no? ... ok no vamos a ejecutar algo un poquito mas rimbombante. Grafana es un software de visualizacion que se conecta a bases de datos no relacionales como Influxdb, Elasticsearch o Prometheus. ¿No las conocen? ya las van a conocer
 
 ```bash
 docker run  -p 3000:3000 -d --name=grafana grafana/grafana:latest
